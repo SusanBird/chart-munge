@@ -8,26 +8,24 @@
   // update DOM to reflect the new state
 
 const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+    'Once',
+    'Daily',
+    'Yearly',
+    'Seldom',
 ];
 
 const data = {
     labels: labels,
     datasets: [{
-        label: 'My First dataset',
+        label: 'Rain by Month',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: [0, 10, 5, 30, 20, 30, 45],
     }]
 };
 
 const config = {
-    type: 'line',
+    type: 'bar',
     data: data,
     options: {}
 };
