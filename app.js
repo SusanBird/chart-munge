@@ -1,27 +1,32 @@
 // import functions and grab DOM elements
+import { makePurchaseFrequencyCountMap } from './data-utils.js';
+import { customers } from './data.js';
 
-// let state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const countMap = makePurchaseFrequencyCountMap(customers);
+
+console.log(countMap);
 
 const labels = [
-    'Once',
     'Daily',
-    'Yearly',
+    'Monthly',
+    'Never',
+    'Often',
     'Seldom',
+    'Weekly',
+    'Yearly',
 ];
 
 const data = {
     labels: labels,
-    datasets: [{
-        label: 'Rain by Month',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 30, 20, 30, 45],
-    }]
+    datasets: [
+        {
+            label: 'Purchase Frequency Amounts',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [430, 59, 127, 240],
+        },
+    ]
 };
 
 const config = {
